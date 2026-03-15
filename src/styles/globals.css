@@ -71,3 +71,7 @@
         @apply px-6 py-3.5 text-base;
     }
 }
+
+iframe {
+    display: block;
+}
