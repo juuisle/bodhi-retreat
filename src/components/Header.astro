@@ -1,30 +1,50 @@
 ---
-import Logo from '../components/Logo.astro';
-
-const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
-];
+const path = Astro.url.pathname;
+const isEn = path.startsWith('/en');
 ---
 
-<nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-        <Logo />
-    </a>
-    {
-        !!navItems?.length && (
-            <ul class="flex flex-wrap gap-x-4 gap-y-1">
-                {navItems.map((item) => (
-                    <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
-                            {item.linkText}
+<header class="border-b border-neutral-200 py-6">
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <a href={isEn ? '/en' : '/'} class="no-underline text-neutral-900">
+            <span class="text-xl font-semibold">
+                {isEn ? 'Go back home' : 'Đi về nhà'}
+            </span>
+        </a>
+
+        <nav class="flex flex-wrap items-center gap-5 text-sm sm:text-base">
+            {
+                isEn ? (
+                    <>
+                        <a href="/en/about" class="no-underline text-neutral-700 hover:text-neutral-900">
+                            About
                         </a>
-                    </li>
-                ))}
-            </ul>
-        )
-    }
-</nav>
+                        <a href="/en/teachers" class="no-underline text-neutral-700 hover:text-neutral-900">
+                            Teachers
+                        </a>
+                        <a href="/en/register" class="no-underline text-neutral-700 hover:text-neutral-900">
+                            Register
+                        </a>
+                        <a href="/" class="no-underline text-neutral-700 hover:text-neutral-900">
+                            Tiếng Việt
+                        </a>
+                    </>
+                ) : (
+                    <>
+                        <a href="/about" class="no-underline text-neutral-700 hover:text-neutral-900">
+                            Giới thiệu
+                        </a>
+                        <a href="/teachers" class="no-underline text-neutral-700 hover:text-neutral-900">
+                            Giảng sư
+                        </a>
+                        <a href="/register" class="no-underline text-neutral-700 hover:text-neutral-900">
+                            Ghi danh
+                        </a>
+                        <a href="/en" class="no-underline text-neutral-700 hover:text-neutral-900">
+                            English
+                        </a>
+                    </>
+                )
+            }
+        </nav>
+    </div>
+</header>

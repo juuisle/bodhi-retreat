@@ -1,19 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="Khóa Phật Thất tại Bồ Đề Đạo Tràng">
+    <section class="grid max-w-5xl items-center gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
+            <h1 class="mb-6">Khóa Phật Thất tại Bồ Đề Đạo Tràng</h1>
+
+            <p class="mb-4 text-lg">
+                <strong>28/12/2026 – 03/01/2027</strong>
+            </p>
+
+            <p class="mb-4">Kính mời quý Phật tử trở về thánh tích linh thiêng, cùng chiêm bái, tu học và nuôi dưỡng đời sống tâm linh.</p>
+
+            <p class="mb-8">
+                Khóa tu đặc biệt này do chư Tăng <strong>Tổ Đình Viên Giác</strong>, <strong>Tu viện Vô Lượng Thọ</strong>,
+                <strong>Tu viện Viên Lạc (Đức Quốc)</strong> và <strong>Tu viện Liên Tâm (Phần Lan)</strong> đồng tổ chức.
+            </p>
+
+            <a href="/register" class="btn btn-lg">Ghi danh</a>
+        </div>
+
+        <div>
+            <img src="/images/bodhgaya2.png" alt="Bồ Đề Đạo Tràng" class="h-full max-h-[520px] w-full rounded-2xl object-cover" />
+        </div>
+    </section>
 </Layout>
