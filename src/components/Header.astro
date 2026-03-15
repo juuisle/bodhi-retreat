@@ -1,7 +1,8 @@
 ---
 const path = Astro.url.pathname;
 const isEn = path.startsWith('/en');
-const isHome = path === '/' || path === '/en';
+const normalizedPath = path.replace(/\/+$/, '') || '/';
+const isHome = normalizedPath === '/' || normalizedPath === '/en';
 ---
 
 <header class="border-b border-neutral-200 py-6">
