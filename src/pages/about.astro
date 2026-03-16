@@ -6,28 +6,32 @@ import Layout from '../layouts/Layout.astro';
     <section class="max-w-4xl py-16 space-y-10">
         <div>
             <p class="mb-3 text-sm uppercase tracking-[0.2em] text-neutral-500">Giới thiệu</p>
-            <h1 class="mb-6">Khóa Phật Thất tại Bồ Đề Đạo Tràng</h1>
+            <h1 class="mb-6">Khóa tu Phật Thất tại Bồ Đề Đạo Tràng</h1>
             <p class="max-w-3xl text-lg leading-8 text-neutral-700">
                 Khóa tu được tổ chức tại Bồ Đề Đạo Tràng, Ấn Độ, từ ngày
                 <strong>28/12/2026 đến 03/01/2027</strong>, là dịp quý báu để quý Phật tử trở về thánh tích linh thiêng, cùng chiêm bái, tu học và nuôi dưỡng
                 đời sống tâm linh nơi đất Phật.
             </p>
 
-        <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
-            <button
-                id="image-modal-close"
-                type="button"
-                class="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-sm font-medium text-neutral-900"
-                aria-label="Đóng ảnh"
-            >
-                Đóng
-            </button>
-            <img id="image-modal-img" src="" alt="" class="max-h-[90vh] max-w-[95vw] rounded-2xl object-contain" />
-        </div>
+            <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
+                <button
+                    id="image-modal-close"
+                    type="button"
+                    class="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-sm font-medium text-neutral-900"
+                    aria-label="Đóng ảnh"
+                >
+                    Đóng
+                </button>
+                <img id="image-modal-img" src="" alt="" class="max-h-[90vh] max-w-[95vw] rounded-2xl object-contain" />
+            </div>
         </div>
 
-        <a href="/images/bodhgaya.jpg" class="popup-image block overflow-hidden rounded-3xl">
-            <img src="/images/bodhgaya.jpg" alt="Bồ Đề Đạo Tràng" class="h-full max-h-[420px] w-full object-cover transition hover:opacity-95" />
+        <a href="/images/khoatu/tuongphattaithap.jpg" class="popup-image block overflow-hidden rounded-3xl">
+            <img
+                src="/images/khoatu/tuongphattaithap.jpg"
+                alt="Tượng Phật tại tháp Bồ Đề Đạo Tràng"
+                class="h-full max-h-[420px] w-full object-cover transition hover:opacity-95"
+            />
         </a>
 
         <div class="grid gap-6">
@@ -76,15 +80,11 @@ import Layout from '../layouts/Layout.astro';
                         />
                     </a>
                     <a href="/images/khoatu/phaphoi.jpg" class="popup-image block">
-                        <img
-                            src="/images/khoatu/phaphoi.jpg"
-                            alt="Pháp hội"
-                            class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95"
-                        />
+                        <img src="/images/khoatu/phaphoi.jpg" alt="Pháp hội" class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95" />
                     </a>
-                    <a href="/images/khoatu/tuongphattaithap.jpg" class="popup-image block">
+                    <a href="/images/khoatu/thapgiacngo2.jpg" class="popup-image block">
                         <img
-                            src="/images/khoatu/tuongphattaithap.jpg"
+                            src="/images/khoatu/thapgiacngo2.jpg"
                             alt="Tượng Phật tại tháp"
                             class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95"
                         />
@@ -125,12 +125,20 @@ import Layout from '../layouts/Layout.astro';
                     cũng sẽ được hành trì niệm Phật, tụng niệm, quán tưởng và nuôi lớn tín tâm, nguyện tâm, để an trú thân tâm trong ánh sáng từ bi của chư
                     Phật. Hai phương diện Thiền, Tịnh ấy tuy hai mà một, không tách rời mà hỗ trợ cho nhau. Giống như chư Tổ đã từng dạy:
                 </p>
-                <p class="mt-4 leading-8 text-neutral-700">
-                    “Hữu Thiền hữu Tịnh độ<br />
-                    Du như đới giác hổ<br />
-                    Hiện thế vi nhân sư<br />
-                    Lai sinh tác Phật Tổ”.
-                </p>
+                <div class="mt-4 grid gap-4 md:grid-cols-2">
+                    <p class="leading-8 text-neutral-700">
+                        “Hữu Thiền hữu Tịnh độ<br />
+                        Du như đới giác hổ<br />
+                        Hiện thế vi nhân sư<br />
+                        Lai sinh tác Phật Tổ”.
+                    </p>
+                    <p class="leading-8 text-neutral-700">
+                        “Có Thiền có Tịnh độ<br />
+                        Như hổ mọc thêm sừng<br />
+                        Hiện đời thầy trời người<br />
+                        Vị lai làm Phật Tổ”.
+                    </p>
+                </div>
                 <div class="mt-6 grid gap-4 md:grid-cols-2">
                     <a href="/images/khoatu/hanhgioihanhdinh.jpg" class="popup-image block">
                         <img
@@ -147,13 +155,6 @@ import Layout from '../layouts/Layout.astro';
                         />
                     </a>
                 </div>
-                <p class="mt-4 leading-8 text-neutral-700">
-                    Nghĩa là:<br />
-                    “Có Thiền có Tịnh độ<br />
-                    Như hổ mọc thêm sừng<br />
-                    Hiện đời thầy trời người<br />
-                    Vị lai làm Phật Tổ”.
-                </p>
             </div>
 
             <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
@@ -193,6 +194,13 @@ import Layout from '../layouts/Layout.astro';
 
             <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
                 <h2 class="mb-4">Hành hương 4 ngày (tùy chọn)</h2>
+                <a href="/images/khoatu/thapgiacngo4.jpg" class="popup-image block">
+                    <img
+                        src="/images/khoatu/thapgiacngo4.jpg"
+                        alt="Tháp Giác Ngộ"
+                        class="mb-6 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                    />
+                </a>
                 <p class="leading-8 text-neutral-700">
                     Trước khi khóa tu bắt đầu, hành giả có thể tham gia chuyến hành hương từ <strong>24/12 đến 27/12/2026</strong>, thăm các thánh tích như Hang
                     động Dungeshwari, Tháp Sujata, Vương Xá, Núi Linh Thứu, Nalanda, Tỳ Xá Ly, Sarnath và nhiều địa danh linh thiêng khác. Xin xem thông tin chi
@@ -205,7 +213,6 @@ import Layout from '../layouts/Layout.astro';
             <a href="/register" class="btn btn-lg rounded-2xl">Ghi danh</a>
         </div>
     </section>
-
 </Layout>
 
 <script>
