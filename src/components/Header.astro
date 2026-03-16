@@ -18,20 +18,12 @@ const homeLogos = [
                 {
                     isHome ? (
                         <div class="flex items-center gap-1.5">
-                            {
-                                homeLogos.map((logo, index) => (
-                                    <>
-                                        <img
-                                            src={logo.src}
-                                            alt={logo.alt}
-                                            class="h-9 w-9 rounded-full border border-neutral-200 object-cover bg-white"
-                                        />
-                                        {index < homeLogos.length - 1 && (
-                                            <span class="text-sm font-medium text-neutral-400">+</span>
-                                        )}
-                                    </>
-                                ))
-                            }
+                            {homeLogos.map((logo, index) => (
+                                <>
+                                    <img src={logo.src} alt={logo.alt} class="h-9 w-9 rounded-full border border-neutral-200 object-cover bg-white" />
+                                    {index < homeLogos.length - 1 && <span class="text-sm font-medium text-neutral-400">+</span>}
+                                </>
+                            ))}
                         </div>
                     ) : (
                         <span class="text-xl font-semibold">{isEn ? '< Go home' : '< Đi về nhà'}</span>
@@ -58,7 +50,7 @@ const homeLogos = [
                             Pilgrimage
                         </a>
                         <a href="/en/teachers" class="no-underline text-neutral-700 hover:text-neutral-900">
-                            Teachers
+                            Sangha
                         </a>
                         <a href="/en/register" class="no-underline text-neutral-700 hover:text-neutral-900">
                             Register
@@ -79,7 +71,7 @@ const homeLogos = [
                             Hành hương
                         </a>
                         <a href="/teachers" class="no-underline text-neutral-700 hover:text-neutral-900">
-                            Giảng sư
+                            Tăng Đoàn
                         </a>
                         <a href="/register" class="no-underline text-neutral-700 hover:text-neutral-900">
                             Ghi danh
