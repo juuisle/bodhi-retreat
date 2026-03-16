@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Khóa Phật Thất tại Bồ Đề Đạo Tràng">
     <section class="grid max-w-5xl items-center gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr]">
-        <div class="order-2 lg:order-1">
+        <div class="hero-text order-2 lg:order-1">
             <h1 class="mb-6">Khóa tu Phật Thất tại Bồ Đề Đạo Tràng</h1>
 
             <p class="mb-4 text-lg">
@@ -18,11 +18,108 @@ import Layout from '../layouts/Layout.astro';
                 <strong>Tu viện Viên Lạc (Đức Quốc)</strong> và <strong>Tu viện Liên Tâm (Phần Lan)</strong> đồng tổ chức.
             </p>
 
-            <a href="/register" class="btn btn-lg">Ghi danh</a>
+            <div class="flex flex-wrap gap-4">
+                <a href="/register" class="btn btn-lg hero-cta">Ghi danh</a>
+                <a href="/about" class="btn btn-lg hero-cta-secondary">Tìm hiểu thêm</a>
+            </div>
         </div>
 
-        <div class="order-1 lg:order-2">
-            <img src="/images/bodhgaya2.png" alt="Bồ Đề Đạo Tràng" class="h-full max-h-[520px] w-full rounded-2xl object-cover" />
+        <div class="hero-image order-1 lg:order-2 overflow-hidden rounded-2xl">
+            <img src="/images/bodhgaya2.png" alt="Bồ Đề Đạo Tràng" class="h-full max-h-[520px] w-full object-cover" />
         </div>
     </section>
 </Layout>
+
+<style>
+    .hero-text,
+    .hero-image {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 700ms ease, transform 700ms ease;
+        will-change: opacity, transform;
+    }
+
+    .hero-image img {
+        transform: scale(1);
+        transition: transform 6s ease;
+        will-change: transform;
+    }
+
+    .hero-text.is-visible,
+    .hero-image.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hero-image.is-visible img {
+        transform: scale(1.03);
+    }
+
+    .hero-cta {
+        transition: transform 220ms ease, box-shadow 220ms ease;
+        will-change: transform;
+    }
+
+    .hero-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero-cta:active {
+        transform: translateY(0);
+    }
+
+    .hero-cta-secondary {
+        transition: transform 220ms ease, box-shadow 220ms ease;
+        will-change: transform;
+    }
+
+    .hero-cta-secondary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-cta-secondary:active {
+        transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero-text,
+        .hero-image,
+        .hero-image img {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        .hero-cta {
+            transition: none;
+        }
+
+        .hero-cta-secondary {
+            transition: none;
+        }
+
+        .hero-cta:hover,
+        .hero-cta:active {
+            transform: none;
+        }
+
+        .hero-cta-secondary:hover,
+        .hero-cta-secondary:active {
+            transform: none;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const heroText = document.querySelector('.hero-text');
+        const heroImage = document.querySelector('.hero-image');
+
+        requestAnimationFrame(() => {
+            heroText?.classList.add('is-visible');
+            heroImage?.classList.add('is-visible');
+        });
+    });
+</script>

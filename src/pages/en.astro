@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="7-Day Phật Thất Retreat at Bodh Gaya">
     <section class="grid max-w-5xl items-center gap-10 py-16 lg:grid-cols-[1.15fr_0.85fr]">
-        <div class="order-2 lg:order-1">
+        <div class="hero-text order-2 lg:order-1">
             <h1 class="mb-6">7-Day Phật Thất Retreat at Bodh Gaya</h1>
 
             <p class="mb-4 text-lg">
@@ -16,18 +16,94 @@ import Layout from '../layouts/Layout.astro';
             </p>
 
             <p class="mb-8">
-                This special retreat is jointly organized by the Sangha of <strong>Viên Giác Patriarchal Monastery</strong>,
+                This special retreat is jointly organized by the Sangha of <strong>Viên Giác Root Monastery</strong>,
                 <strong>Amitayus Monastery</strong>, <strong>Viên Lạc Monastery (Germany)</strong>, and
                 <strong>Liên Tâm Monastery (Finland)</strong>.
             </p>
 
             <p>
-                <a href="/en/register" class="btn btn-lg rounded-2xl">Register</a>
+                <a href="/en/register" class="btn btn-lg rounded-2xl hero-cta">Register</a>
+                <a href="/en/about" class="btn btn-lg hero-cta-secondary">Read more</a>
             </p>
         </div>
 
-        <div class="order-1 lg:order-2">
-            <img src="/images/bodhgaya2.png" alt="Bodh Gaya" class="h-full max-h-[520px] w-full rounded-3xl object-cover shadow-2xl" />
+        <div class="hero-image order-1 lg:order-2 overflow-hidden rounded-2xl">
+            <img src="/images/bodhgaya2.png" alt="Bodh Gaya" class="h-full max-h-[520px] w-full object-cover" />
         </div>
     </section>
 </Layout>
+
+<style>
+    .hero-text,
+    .hero-image {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+            opacity 700ms ease,
+            transform 700ms ease;
+        will-change: opacity, transform;
+    }
+
+    .hero-image img {
+        transform: scale(1);
+        transition: transform 6s ease;
+        will-change: transform;
+    }
+
+    .hero-text.is-visible,
+    .hero-image.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hero-image.is-visible img {
+        transform: scale(1.03);
+    }
+
+    .hero-cta {
+        transition:
+            transform 220ms ease,
+            box-shadow 220ms ease;
+        will-change: transform;
+    }
+
+    .hero-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero-cta:active {
+        transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero-text,
+        .hero-image,
+        .hero-image img {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        .hero-cta {
+            transition: none;
+        }
+
+        .hero-cta:hover,
+        .hero-cta:active {
+            transform: none;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const heroText = document.querySelector('.hero-text');
+        const heroImage = document.querySelector('.hero-image');
+
+        requestAnimationFrame(() => {
+            heroText?.classList.add('is-visible');
+            heroImage?.classList.add('is-visible');
+        });
+    });
+</script>
