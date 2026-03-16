@@ -12,11 +12,23 @@ import Layout from '../layouts/Layout.astro';
                 <strong>28/12/2026 đến 03/01/2027</strong>, là dịp quý báu để quý Phật tử trở về thánh tích linh thiêng, cùng chiêm bái, tu học và nuôi dưỡng
                 đời sống tâm linh nơi đất Phật.
             </p>
+
+        <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
+            <button
+                id="image-modal-close"
+                type="button"
+                class="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-sm font-medium text-neutral-900"
+                aria-label="Đóng ảnh"
+            >
+                Đóng
+            </button>
+            <img id="image-modal-img" src="" alt="" class="max-h-[90vh] max-w-[95vw] rounded-2xl object-contain" />
+        </div>
         </div>
 
-        <div class="overflow-hidden rounded-3xl">
-            <img src="/images/bodhgaya.jpg" alt="Bồ Đề Đạo Tràng" class="h-full max-h-[420px] w-full object-cover" />
-        </div>
+        <a href="/images/bodhgaya.jpg" class="popup-image block overflow-hidden rounded-3xl">
+            <img src="/images/bodhgaya.jpg" alt="Bồ Đề Đạo Tràng" class="h-full max-h-[420px] w-full object-cover transition hover:opacity-95" />
+        </a>
 
         <div class="grid gap-6">
             <div class="rounded-2xl border border-neutral-200 bg-white p-6 md:p-8">
@@ -47,6 +59,37 @@ import Layout from '../layouts/Layout.astro';
                         <strong>17:00:</strong> Kết thúc chương trình chính trong ngày
                     </div>
                 </div>
+
+                <div class="mt-6 grid gap-4 md:grid-cols-2">
+                    <a href="/images/khoatu/tungkinhsangtaiviengiac.jpg" class="popup-image block">
+                        <img
+                            src="/images/khoatu/tungkinhsangtaiviengiac.jpg"
+                            alt="Tụng kinh sáng tại Viên Giác"
+                            class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95"
+                        />
+                    </a>
+                    <a href="/images/khoatu/thapgiacngo.jpg" class="popup-image block">
+                        <img
+                            src="/images/khoatu/thapgiacngo.jpg"
+                            alt="Tháp Giác Ngộ"
+                            class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95"
+                        />
+                    </a>
+                    <a href="/images/khoatu/phaphoi.jpg" class="popup-image block">
+                        <img
+                            src="/images/khoatu/phaphoi.jpg"
+                            alt="Pháp hội"
+                            class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95"
+                        />
+                    </a>
+                    <a href="/images/khoatu/tuongphattaithap.jpg" class="popup-image block">
+                        <img
+                            src="/images/khoatu/tuongphattaithap.jpg"
+                            alt="Tượng Phật tại tháp"
+                            class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95"
+                        />
+                    </a>
+                </div>
             </div>
 
             <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
@@ -61,14 +104,21 @@ import Layout from '../layouts/Layout.astro';
                     tụng niệm, thiền quán và lắng nghe pháp thoại trong tinh thần hòa hợp, tỉnh thức. Đây cũng là dịp để nuôi lớn tâm bồ đề, vun bồi hạt giống
                     an lạc và nhắc mình nhớ lại chí nguyện tu học trên con đường trở về với chính mình.
                 </p>
+                <a href="/images/khoatu/bodedaotrang.jpg" class="popup-image block">
+                    <img
+                        src="/images/khoatu/bodedaotrang.jpg"
+                        alt="Bồ Đề Đạo Tràng"
+                        class="mt-6 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                    />
+                </a>
             </div>
 
             <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
                 <h2 class="mb-4">Tông chỉ tu học</h2>
                 <p class="leading-8 text-neutral-700">
-                    Khóa tu được hành trì theo tông chỉ <strong>Thiền Tịnh song tu</strong>, dung hợp tinh thần của Thiền tập và niềm tin sâu vững của pháp
-                    môn Tịnh Độ, phù hợp cho cả những hành giả chuyên tu Thiền lẫn những vị chuyên tu niệm Phật. Trong môi trường tu học thanh tịnh nơi đất
-                    Phật, đại chúng sẽ có cơ hội trở về nuôi dưỡng thân tâm qua sự thực tập đều đặn, dưới sự hướng dẫn của Tăng chúng.
+                    Khóa tu được hành trì theo tông chỉ <strong>Thiền Tịnh song tu</strong>, dung hợp tinh thần của Thiền tập và niềm tin sâu vững của pháp môn
+                    Tịnh Độ, phù hợp cho cả những hành giả chuyên tu Thiền lẫn những vị chuyên tu niệm Phật. Trong môi trường tu học thanh tịnh nơi đất Phật,
+                    đại chúng sẽ có cơ hội trở về nuôi dưỡng thân tâm qua sự thực tập đều đặn, dưới sự hướng dẫn của Tăng chúng.
                 </p>
                 <p class="mt-4 leading-8 text-neutral-700">
                     Những hành giả thiên về Thiền sẽ được học hỏi và thực tập với chư Tôn đức có kinh nghiệm hướng dẫn thiền. Những hành giả chuyên tu Tịnh Độ
@@ -81,6 +131,22 @@ import Layout from '../layouts/Layout.astro';
                     Hiện thế vi nhân sư<br />
                     Lai sinh tác Phật Tổ”.
                 </p>
+                <div class="mt-6 grid gap-4 md:grid-cols-2">
+                    <a href="/images/khoatu/hanhgioihanhdinh.jpg" class="popup-image block">
+                        <img
+                            src="/images/khoatu/hanhgioihanhdinh.jpg"
+                            alt="Thực tập hành giới hành định"
+                            class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95"
+                        />
+                    </a>
+                    <a href="/images/khoatu/tangdoan.jpg" class="popup-image block">
+                        <img
+                            src="/images/khoatu/tangdoan.jpg"
+                            alt="Tăng đoàn hướng dẫn tu học"
+                            class="h-72 w-full rounded-2xl object-cover transition hover:opacity-95"
+                        />
+                    </a>
+                </div>
                 <p class="mt-4 leading-8 text-neutral-700">
                     Nghĩa là:<br />
                     “Có Thiền có Tịnh độ<br />
@@ -103,13 +169,20 @@ import Layout from '../layouts/Layout.astro';
                     giảng sư đều là những bậc có kiến thức Phật pháp vững vàng và khả năng sử dụng ngôn ngữ lưu loát, nhờ đó có thể truyền tải giáo pháp một
                     cách rõ ràng, sâu sắc và gần gũi đến với hành giả thuộc nhiều quốc tịch khác nhau.
                 </p>
+                <a href="/images/khoatu/hinhsuphu.jpg" class="popup-image block">
+                    <img
+                        src="/images/khoatu/hinhsuphu.jpg"
+                        alt="Chư Tôn đức giảng dạy"
+                        class="mt-6 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                    />
+                </a>
             </div>
 
             <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
                 <h2 class="mb-4">Về việc lưu trú tại Ấn Độ</h2>
                 <p class="leading-8 text-neutral-700">
-                    Hành giả sẽ <strong>tự túc chi phí</strong> cho toàn bộ chuyến đi, bao gồm vé máy bay, lưu trú, ăn uống, di chuyển và các chi phí cá nhân
-                    khác. Ban tổ chức sẽ hỗ trợ cung cấp thông tin cần thiết, tư vấn chỗ ở và phối hợp các vấn đề địa phương khi cần.
+                    Hành giả sẽ <strong>tự túc chi phí</strong> cho toàn bộ chuyến đi, bao gồm vé máy bay, lưu trú, ăn uống, di chuyển và các chi phí cá nhân khác.
+                    Ban tổ chức sẽ hỗ trợ cung cấp thông tin cần thiết, tư vấn chỗ ở và phối hợp các vấn đề địa phương khi cần.
                 </p>
                 <p class="mt-4 leading-8 text-neutral-700">
                     Về lưu trú, ban tổ chức sẽ chuẩn bị danh sách khách sạn và có thể hỗ trợ đặt phòng; tuy nhiên hành giả <strong>tự check-in</strong>,
@@ -132,4 +205,52 @@ import Layout from '../layouts/Layout.astro';
             <a href="/register" class="btn btn-lg rounded-2xl">Ghi danh</a>
         </div>
     </section>
+
 </Layout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('image-modal-img');
+        const closeBtn = document.getElementById('image-modal-close');
+        const triggers = document.querySelectorAll('.popup-image');
+
+        if (!modal || !modalImg || !closeBtn || triggers.length === 0) return;
+
+        const openModal = (src, alt) => {
+            modalImg.src = src;
+            modalImg.alt = alt || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        };
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modalImg.src = '';
+            modalImg.alt = '';
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        triggers.forEach((trigger) => {
+            trigger.addEventListener('click', (event) => {
+                event.preventDefault();
+                const img = trigger.querySelector('img');
+                openModal(trigger.getAttribute('href') || '', img?.getAttribute('alt') || '');
+            });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    });
+</script>
