@@ -10,6 +10,18 @@ import Layout from '../../layouts/Layout.astro';
         </p>
         <p class="mb-10 text-lg leading-8 text-neutral-700">Dates: December 24, 2026 – December 27, 2026</p>
 
+        <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
+            <button
+                id="image-modal-close"
+                type="button"
+                class="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-sm font-medium text-neutral-900"
+                aria-label="Close image"
+            >
+                Close
+            </button>
+            <img id="image-modal-img" src="" alt="" class="max-h-[90vh] max-w-[95vw] rounded-2xl object-contain" />
+        </div>
+
         <div class="grid gap-6 text-neutral-800">
             <section class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
                 <h2 class="mb-4 text-2xl font-semibold">General Introduction</h2>
@@ -36,20 +48,41 @@ import Layout from '../../layouts/Layout.astro';
                     <div>
                         <h3 class="mb-2 text-xl font-semibold">Day 1 – December 24</h3>
                         <p class="mb-4 font-medium text-neutral-800">Dungeshwari – Sujata – Bodh Gaya</p>
-                        <ul class="list-disc pl-6 space-y-4 leading-7 text-neutral-700">
+                        <ul class="list-disc pl-6 space-y-6 leading-7 text-neutral-700">
                             <li>
                                 <strong>Dungeshwari Cave</strong><br />
                                 The place where the Buddha practiced severe asceticism for many years before realizing that extreme self-mortification does not lead
                                 to awakening.
+                                <a href="/images/hanhhuong/Dungeshwari.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Dungeshwari.png"
+                                        alt="Dungeshwari Cave"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Sujata Stupa</strong><br />
                                 A reminder of the important turning point when Sujata offered milk-rice, marking the Buddha’s shift from extreme asceticism to the
                                 Middle Way.
+                                <a href="/images/hanhhuong/Sujata.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Sujata.png"
+                                        alt="Sujata Stupa"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Mahabodhi Temple Complex</strong><br />
                                 The place where the Buddha attained enlightenment beneath the Bodhi Tree, one of the most sacred sites in all of Buddhism.
+                                <a href="/images/hanhhuong/Mahabodhi.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Mahabodhi.png"
+                                        alt="Mahabodhi Temple Complex"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -57,18 +90,39 @@ import Layout from '../../layouts/Layout.astro';
                     <div>
                         <h3 class="mb-2 text-xl font-semibold">Day 2 – December 25</h3>
                         <p class="mb-4 font-medium text-neutral-800">Rajgir – Vulture Peak – Nalanda University</p>
-                        <ul class="list-disc pl-6 space-y-4 leading-7 text-neutral-700">
+                        <ul class="list-disc pl-6 space-y-6 leading-7 text-neutral-700">
                             <li>
                                 <strong>Early departure for Rajgir</strong><br />
                                 A region closely connected with the period when the Buddha was actively teaching after enlightenment.
+                                <a href="/images/hanhhuong/Rajgir.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Rajgir.png"
+                                        alt="Rajgir"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Vulture Peak (Gridhrakuta)</strong><br />
                                 One of the places the Buddha often visited and taught. It is a particularly meaningful stop for meditation and Dharma reflection.
+                                <a href="/images/hanhhuong/Gridhrakuta.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Gridhrakuta.png"
+                                        alt="Vulture Peak"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Nalanda University Ruins</strong><br />
                                 A renowned center of Buddhist learning and practice that flourished for centuries, preserving a brilliant legacy of Buddhist scholarship.
+                                <a href="/images/hanhhuong/nalanda.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/nalanda.png"
+                                        alt="Nalanda University Ruins"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -76,18 +130,39 @@ import Layout from '../../layouts/Layout.astro';
                     <div>
                         <h3 class="mb-2 text-xl font-semibold">Day 3 – December 26</h3>
                         <p class="mb-4 font-medium text-neutral-800">Vaishali – Smriti Park – Varanasi</p>
-                        <ul class="list-disc pl-6 space-y-4 leading-7 text-neutral-700">
+                        <ul class="list-disc pl-6 space-y-6 leading-7 text-neutral-700">
                             <li>
                                 <strong>Early departure for Vaishali</strong><br />
                                 The place where the Buddha delivered his final discourse and also the site associated with the first ordination of Bhikkhunis.
+                                <a href="/images/hanhhuong/Vaishali.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Vaishali.png"
+                                        alt="Vaishali"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Smriti Park</strong><br />
                                 A green and peaceful space, suitable for remembrance and contemplation on the Buddha’s life, vows, and teachings.
+                                <a href="/images/hanhhuong/Smriti.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Smriti.png"
+                                        alt="Smriti Park"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Travel to Varanasi</strong><br />
                                 Overnight stay in Varanasi.
+                                <a href="/images/hanhhuong/Varanasi.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Varanasi.png"
+                                        alt="Varanasi"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -95,21 +170,38 @@ import Layout from '../../layouts/Layout.astro';
                     <div>
                         <h3 class="mb-2 text-xl font-semibold">Day 4 – December 27</h3>
                         <p class="mb-4 font-medium text-neutral-800">Sarnath – Varanasi – Return to Bodh Gaya</p>
-                        <ul class="list-disc pl-6 space-y-4 leading-7 text-neutral-700">
+                        <ul class="list-disc pl-6 space-y-6 leading-7 text-neutral-700">
                             <li>
                                 <strong>Sarnath</strong><br />
                                 The place where the Buddha gave his first sermon after enlightenment.
+                                <a href="/images/hanhhuong/Sarnath.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Sarnath.png"
+                                        alt="Sarnath"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Dhamek Stupa</strong><br />
                                 A landmark connected with the moment when the Wheel of Dharma first began to turn, opening the path of practice for countless beings.
+                                <a href="/images/hanhhuong/Dhamek.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Dhamek.png"
+                                        alt="Dhamek Stupa"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Optional visit to the Ganges River</strong>
-                            </li>
-                            <li>
-                                <strong>Return to Bodh Gaya</strong><br />
-                                End of the pilgrimage program and preparation for the main retreat.
+                                <a href="/images/hanhhuong/Varanasi.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Varanasi.png"
+                                        alt="Ganges River in Varanasi"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -170,3 +262,50 @@ import Layout from '../../layouts/Layout.astro';
         </div>
     </section>
 </Layout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('image-modal-img');
+        const closeBtn = document.getElementById('image-modal-close');
+        const triggers = document.querySelectorAll('.popup-image');
+
+        if (!modal || !modalImg || !closeBtn || triggers.length === 0) return;
+
+        const openModal = (src, alt) => {
+            modalImg.src = src;
+            modalImg.alt = alt || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        };
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modalImg.src = '';
+            modalImg.alt = '';
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        triggers.forEach((trigger) => {
+            trigger.addEventListener('click', (event) => {
+                event.preventDefault();
+                const img = trigger.querySelector('img');
+                openModal(trigger.getAttribute('href') || '', img?.getAttribute('alt') || '');
+            });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    });
+</script>

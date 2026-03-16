@@ -10,6 +10,18 @@ import Layout from '../layouts/Layout.astro';
         </p>
         <p class="text-lg leading-8 text-neutral-700 mb-10">Thời gian: 24/12/2026 – 27/12/2026</p>
 
+        <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
+            <button
+                id="image-modal-close"
+                type="button"
+                class="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-sm font-medium text-neutral-900"
+                aria-label="Đóng ảnh"
+            >
+                Đóng
+            </button>
+            <img id="image-modal-img" src="" alt="" class="max-h-[90vh] max-w-[95vw] rounded-2xl object-contain" />
+        </div>
+
         <div class="grid gap-6 text-neutral-800">
             <section class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
                 <h2 class="mb-4 text-2xl font-semibold">Giới thiệu chung</h2>
@@ -35,19 +47,40 @@ import Layout from '../layouts/Layout.astro';
                     <div>
                         <h3 class="mb-2 text-xl font-semibold">Ngày 1 – 24/12</h3>
                         <p class="mb-4 font-medium text-neutral-800">Dungeshwari – Sujata – Bồ Đề Đạo Tràng</p>
-                        <ul class="list-disc pl-6 space-y-4 leading-7 text-neutral-700">
+                        <ul class="list-disc pl-6 space-y-6 leading-7 text-neutral-700">
                             <li>
                                 <strong>Hang động Dungeshwari</strong><br />
                                 Nơi Đức Phật từng tu khổ hạnh trong nhiều năm trước khi nhận ra rằng ép xác cực đoan không đưa đến giác ngộ.
+                                <a href="/images/hanhhuong/Dungeshwari.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Dungeshwari.png"
+                                        alt="Hang động Dungeshwari"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Tháp Sujata</strong><br />
                                 Gợi nhắc bước ngoặt quan trọng khi nàng Sujata dâng bát sữa, đánh dấu sự chuyển hướng của Đức Phật từ con đường khổ hạnh sang con
                                 đường Trung đạo.
+                                <a href="/images/hanhhuong/Sujata.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Sujata.png"
+                                        alt="Tháp Sujata"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Quần thể Đại Tháp Đại Giác (Mahabodhi)</strong><br />
                                 Nơi Đức Phật thành đạo dưới cội Bồ đề, một trong những thánh tích linh thiêng bậc nhất của Phật giáo.
+                                <a href="/images/hanhhuong/Mahabodhi.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Mahabodhi.png"
+                                        alt="Quần thể Đại Tháp Đại Giác"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -55,18 +88,39 @@ import Layout from '../layouts/Layout.astro';
                     <div>
                         <h3 class="mb-2 text-xl font-semibold">Ngày 2 – 25/12</h3>
                         <p class="mb-4 font-medium text-neutral-800">Thành Vương Xá (Rajgir) – Núi Linh Thứu – Đại học Nalanda</p>
-                        <ul class="list-disc pl-6 space-y-4 leading-7 text-neutral-700">
+                        <ul class="list-disc pl-6 space-y-6 leading-7 text-neutral-700">
                             <li>
                                 <strong>Khởi hành sớm đi Thành Vương Xá (Rajgir)</strong><br />
                                 Vùng đất gắn với thời kỳ Đức Phật hoằng pháp mạnh mẽ sau khi thành đạo.
+                                <a href="/images/hanhhuong/Rajgir.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Rajgir.png"
+                                        alt="Thành Vương Xá"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Núi Linh Thứu (Gridhrakuta)</strong><br />
                                 Một trong những nơi Đức Phật thường lui tới và thuyết pháp. Đây là điểm dừng mang chiều sâu thiền quán và học pháp rất đặc biệt.
+                                <a href="/images/hanhhuong/Gridhrakuta.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Gridhrakuta.png"
+                                        alt="Núi Linh Thứu"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Di tích Đại học Nalanda</strong><br />
                                 Trung tâm Phật học và tu học nổi tiếng kéo dài nhiều thế kỷ, nơi lưu giữ dấu ấn rực rỡ của truyền thống học thuật Phật giáo.
+                                <a href="/images/hanhhuong/nalanda.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/nalanda.png"
+                                        alt="Di tích Đại học Nalanda"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -74,18 +128,39 @@ import Layout from '../layouts/Layout.astro';
                     <div>
                         <h3 class="mb-2 text-xl font-semibold">Ngày 3 – 26/12</h3>
                         <p class="mb-4 font-medium text-neutral-800">Tỳ Xá Ly (Vaishali) – Công viên Tưởng niệm – Ba La Nại (Varanasi)</p>
-                        <ul class="list-disc pl-6 space-y-4 leading-7 text-neutral-700">
+                        <ul class="list-disc pl-6 space-y-6 leading-7 text-neutral-700">
                             <li>
                                 <strong>Khởi hành sớm đi Tỳ Xá Ly (Vaishali)</strong><br />
                                 Nơi Đức Phật thuyết bài pháp cuối cùng và cũng là nơi gắn với dấu mốc truyền giới Tỳ-kheo-ni đầu tiên.
+                                <a href="/images/hanhhuong/Vaishali.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Vaishali.png"
+                                        alt="Tỳ Xá Ly"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Công viên Tưởng niệm (Smriti)</strong><br />
                                 Không gian xanh và yên tĩnh, thích hợp để tưởng niệm và quán niệm về cuộc đời, hạnh nguyện và giáo pháp của Đức Phật.
+                                <a href="/images/hanhhuong/Smriti.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Smriti.png"
+                                        alt="Công viên Tưởng niệm"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Di chuyển đến Ba La Nại (Varanasi)</strong><br />
                                 Nghỉ đêm tại Ba La Nại.
+                                <a href="/images/hanhhuong/Varanasi.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Varanasi.png"
+                                        alt="Ba La Nại"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -93,17 +168,38 @@ import Layout from '../layouts/Layout.astro';
                     <div>
                         <h3 class="mb-2 text-xl font-semibold">Ngày 4 – 27/12</h3>
                         <p class="mb-4 font-medium text-neutral-800">Lộc Uyển (Sarnath) – Ba La Nại – Trở về Bồ Đề Đạo Tràng</p>
-                        <ul class="list-disc pl-6 space-y-4 leading-7 text-neutral-700">
+                        <ul class="list-disc pl-6 space-y-6 leading-7 text-neutral-700">
                             <li>
                                 <strong>Lộc Uyển (Sarnath)</strong><br />
                                 Nơi Đức Phật thuyết bài pháp đầu tiên sau khi thành đạo.
+                                <a href="/images/hanhhuong/Sarnath.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Sarnath.png"
+                                        alt="Lộc Uyển"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Tháp Chuyển Pháp Luân (Dhamek)</strong><br />
                                 Dấu tích gắn với thời khắc bánh xe chánh pháp bắt đầu chuyển vận, mở ra con đường tu học cho muôn người.
+                                <a href="/images/hanhhuong/Dhamek.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Dhamek.png"
+                                        alt="Tháp Chuyển Pháp Luân"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Tùy chọn tham quan sông Hằng</strong>
+                                <a href="/images/hanhhuong/Varanasi.png" class="popup-image block">
+                                    <img
+                                        src="/images/hanhhuong/Varanasi.png"
+                                        alt="Sông Hằng tại Ba La Nại"
+                                        class="mt-4 h-96 w-full rounded-2xl object-cover transition hover:opacity-95"
+                                    />
+                                </a>
                             </li>
                             <li>
                                 <strong>Trở về Bồ Đề Đạo Tràng</strong><br />
@@ -171,3 +267,50 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 </Layout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('image-modal-img');
+        const closeBtn = document.getElementById('image-modal-close');
+        const triggers = document.querySelectorAll('.popup-image');
+
+        if (!modal || !modalImg || !closeBtn || triggers.length === 0) return;
+
+        const openModal = (src, alt) => {
+            modalImg.src = src;
+            modalImg.alt = alt || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        };
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modalImg.src = '';
+            modalImg.alt = '';
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        triggers.forEach((trigger) => {
+            trigger.addEventListener('click', (event) => {
+                event.preventDefault();
+                const img = trigger.querySelector('img');
+                openModal(trigger.getAttribute('href') || '', img?.getAttribute('alt') || '');
+            });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    });
+</script>
