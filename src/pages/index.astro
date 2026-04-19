@@ -21,6 +21,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="flex flex-wrap gap-4">
                 <a href="/register" class="btn btn-lg hero-cta">Ghi danh</a>
                 <a href="/about" class="btn btn-lg hero-cta-secondary">Tìm hiểu thêm</a>
+                <a href="/instruction" class="btn btn-lg hero-cta-secondary">Hướng dẫn chuẩn bị cho khóa tu</a>
             </div>
         </div>
 
@@ -35,7 +36,9 @@ import Layout from '../layouts/Layout.astro';
     .hero-image {
         opacity: 0;
         transform: translateY(18px);
-        transition: opacity 700ms ease, transform 700ms ease;
+        transition:
+            opacity 700ms ease,
+            transform 700ms ease;
         will-change: opacity, transform;
     }
 
@@ -56,7 +59,9 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .hero-cta {
-        transition: transform 220ms ease, box-shadow 220ms ease;
+        transition:
+            transform 220ms ease,
+            box-shadow 220ms ease;
         will-change: transform;
     }
 
@@ -70,7 +75,9 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .hero-cta-secondary {
-        transition: transform 220ms ease, box-shadow 220ms ease;
+        transition:
+            transform 220ms ease,
+            box-shadow 220ms ease;
         will-change: transform;
     }
 
