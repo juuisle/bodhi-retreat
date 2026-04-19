@@ -64,6 +64,11 @@ import Layout from '../../layouts/Layout.astro';
                     </div>
                 </div>
 
+                <div class="mt-6 rounded-2xl border border-neutral-200 bg-amber-50 px-5 py-4 text-neutral-800">
+                    <strong>Special program on January 1, 2027 at 09:00:</strong> Exchange with the Tibetan Buddhist delegation, New Year celebration and the World
+                    Peace Prayer Program at the Mahabodhi Temple.
+                </div>
+
                 <div class="mt-6 grid gap-4 md:grid-cols-2">
                     <a href="/images/khoatu/tungkinhsangtaiviengiac.jpg" class="popup-image block">
                         <img
@@ -215,7 +220,7 @@ import Layout from '../../layouts/Layout.astro';
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('image-modal');
-        const modalImg = document.getElementById('image-modal-img');
+        const modalImg = document.getElementById('image-modal-img') as HTMLImageElement | null;
         const closeBtn = document.getElementById('image-modal-close');
         const triggers = document.querySelectorAll('.popup-image');
 

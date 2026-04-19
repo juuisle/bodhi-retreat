@@ -64,6 +64,11 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
+                <div class="mt-6 rounded-2xl border border-neutral-200 bg-amber-50 px-5 py-4 text-neutral-800">
+                    <strong>Chương trình đặc biệt ngày 01/01/2027 lúc 09:00:</strong> Giao lưu cùng phái đoàn Phật Giáo Tây Tạng và
+                    chương trình đón năm mới, cầu nguyện cho Thế Giới Hòa Bình tại Tháp Giác Ngộ, Bồ Đề Đạo Tràng.
+                </div>
+
                 <div class="mt-6 grid gap-4 md:grid-cols-2">
                     <a href="/images/khoatu/tungkinhsangtaiviengiac.jpg" class="popup-image block">
                         <img
@@ -223,7 +228,7 @@ import Layout from '../layouts/Layout.astro';
         const closeBtn = document.getElementById('image-modal-close');
         const triggers = document.querySelectorAll('.popup-image');
 
-        if (!modal || !modalImg || !closeBtn || triggers.length === 0) return;
+        if (!modal || !(modalImg instanceof HTMLImageElement) || !closeBtn || triggers.length === 0) return;
 
         const openModal = (src, alt) => {
             modalImg.src = src;
