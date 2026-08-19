@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const registrationUrl = 'https://sudhana.net/lien-tam-luostari/khoa-tu-phat-that-tai-bo-e-ao-trang-an-o/register';
 ---
 
 <Layout title="Register | 7-Day Phật Thất Retreat at Bodh Gaya">
@@ -8,16 +10,16 @@ import Layout from '../../layouts/Layout.astro';
             <p class="mb-3 text-sm uppercase tracking-[0.2em] text-neutral-500">Register</p>
             <h1 class="mb-6">Registration Information</h1>
             <p class="max-w-3xl text-lg leading-8 text-neutral-700">
-                Please complete the form below to register for the 7-Day Phật Thất Retreat at Bodh Gaya. You may also contact us for more information about the
-                optional pilgrimage, accommodation, and local arrangements.
+                We warmly invite both lay Buddhists and venerable monastics to register for the 7-Day Phật Thất Retreat at Bodh Gaya using the link below. You
+                may also contact us for more information about the optional pilgrimage, accommodation, and local arrangements.
             </p>
         </div>
 
         <div class="rounded-2xl border-2 border-amber-400 bg-white p-6">
             <p class="text-lg leading-8 text-neutral-800">
-                The registration deadline is 00:00 on August 31, 2026. However, the retreat can currently accommodate a maximum of 60 participants. The
-                registration system will close once all places are filled. Those who register later will be placed on a waiting list. Therefore, we kindly
-                encourage you to register as early as possible.
+                The registration deadline is 00:00 on September 30, 2026. We have been able to arrange a bit more space for participants, and there are
+                currently <strong>10 places left for lay Buddhists</strong>. The registration system will close once all places are filled. Therefore, we
+                kindly encourage you to register as early as possible.
             </p>
         </div>
 
@@ -39,24 +41,18 @@ import Layout from '../../layouts/Layout.astro';
         <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
             <h2 class="mb-4">Registration Notes</h2>
             <p class="leading-8 text-neutral-700">
-                Please fill in the form below as completely as possible. The organizing team will follow up if additional details are needed regarding the
-                retreat or the optional 4-day pilgrimage. You can also register via this link:
-                <a href="https://forms.gle/oLQ1SPgb9MVty8vL6">https://forms.gle/oLQ1SPgb9MVty8vL6</a>
+                Please fill in the registration form as completely as possible. The organizing team will follow up if additional details are needed regarding
+                the retreat or the optional 4-day pilgrimage.
             </p>
         </div>
 
-        <div class="rounded-2xl border border-neutral-200 bg-white p-3 sm:p-4">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfcC0DLipT0YwS78gFs_WO9XRUS6RkOPKqRMBVb6I56CNO4bg/viewform?embedded=true"
-                width="100%"
-                height="6687"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0"
-                class="w-full"
-            >
-                Loading…
-            </iframe>
+        <div class="rounded-2xl border-2 border-amber-400 bg-white p-6 md:p-8">
+            <h2 class="mb-4">Registration form</h2>
+            <p class="leading-8 text-neutral-700">
+                Please register here:
+                <a href={registrationUrl} target="_blank" rel="noreferrer">{registrationUrl}</a>
+            </p>
+            <a href={registrationUrl} target="_blank" rel="noreferrer" class="btn btn-lg mt-5">Register now</a>
         </div>
     </section>
 </Layout>
